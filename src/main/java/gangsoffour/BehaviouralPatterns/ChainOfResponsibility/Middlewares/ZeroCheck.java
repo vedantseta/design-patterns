@@ -1,4 +1,7 @@
-package main.java.gangsoffour.BehaviouralPatterns.ChainOfResponsibility;
+package main.java.gangsoffour.BehaviouralPatterns.ChainOfResponsibility.Middlewares;
+
+import main.java.gangsoffour.BehaviouralPatterns.ChainOfResponsibility.Middleware;
+import main.java.gangsoffour.BehaviouralPatterns.ChainOfResponsibility.NumberType;
 
 /**
  * Created by vedant.s on 30/08/17.
@@ -6,7 +9,7 @@ package main.java.gangsoffour.BehaviouralPatterns.ChainOfResponsibility;
 public class ZeroCheck implements Middleware {
     private Middleware next;
 
-    ZeroCheck(){
+    public ZeroCheck(){
         this.next = null;
     }
 

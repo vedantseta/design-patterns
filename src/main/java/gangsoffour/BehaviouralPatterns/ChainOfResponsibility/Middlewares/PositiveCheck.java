@@ -1,4 +1,7 @@
-package main.java.gangsoffour.BehaviouralPatterns.ChainOfResponsibility;
+package main.java.gangsoffour.BehaviouralPatterns.ChainOfResponsibility.Middlewares;
+
+import main.java.gangsoffour.BehaviouralPatterns.ChainOfResponsibility.Middleware;
+import main.java.gangsoffour.BehaviouralPatterns.ChainOfResponsibility.NumberType;
 
 /**
  * Created by vedant.s on 30/08/17.
@@ -6,7 +9,7 @@ package main.java.gangsoffour.BehaviouralPatterns.ChainOfResponsibility;
 public class PositiveCheck implements Middleware {
     private Middleware next;
 
-    PositiveCheck(){
+    public PositiveCheck(){
         this.next = null;
     }
 
@@ -16,7 +19,7 @@ public class PositiveCheck implements Middleware {
     }
 
     @Override
-    public NumberType  process(int number) {
+    public NumberType process(int number) {
         if(number > 0) {
             return NumberType.POSITIVE;
         }
